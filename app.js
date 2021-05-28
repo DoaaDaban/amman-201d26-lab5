@@ -86,31 +86,36 @@ and the second element is a string that EXACTLY follows this example and uses th
 
 "2,3,4 was passed in as an array of numbers, and 9 is their sum."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. To do addition, use your sum() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator + in this function. 
+To do addition, use your sum() function that you've already created. You're going to have to be resourceful to
+ figure out how to do this. However, you may continue to use the + operator for string concatenation.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, 
+uncomment the call for the testSumArray() function and see if the test passes.*/
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
-
 function sumArray(sumArr) {
   //eslint-disable-line
-  let sum1= sum(2,3)[0];
-   sumArr= sum(sum1,4)[0];
-  console.log(`ANs is ${sumArr}`)
+  let sum1= sum(testArray[0],testArray[1])[0];
+  sumArr= sum(sum1,testArray[2])[0];
+  console.log(`ANs is ${sumArr}`);
+ 
+ return[sumArr,`${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${sumArr} is their sum.`]
   
-  return[sumArr,"2,3,4 was passed in as an array of numbers, and 9 is their sum."]
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
 /////////////////////////////////////
 /* Problem 5
-Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
+Write a function called multiplyArray() that takes an array of numbers as its argument and returns an array whose 
+first element is the product of those numbers, and the second element is a string that EXACTLY follows this example 
+and uses the values that were input into the function:
 
 "The numbers 2,3,4 have a product of 24."
 
@@ -120,13 +125,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  
   //eslint-disable-line
-
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+ //testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
@@ -136,15 +139,21 @@ function multiplyArray(multArr) {
 
 /////////////////////////////////////
 /* STRETCH GOAL: Problem 6
-Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and returns an array whose first element is the product of those numbers, and the second element is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed into the function:
+Write a function called multiplyAnyArray() that takes an array of numbers of any length as its argument and 
+returns an array whose first element is the product of those numbers, and the second element
+ is a string that EXACTLY follows this example and concatenates a message using the arguments that were passed i
+ nto the function:
 
 "The numbers 1,2,3,4,5 have a product of 120."
 
-IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to do this. However, you may continue to use the + operator for string concatenation.
+IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To do multiplication, 
+use your multiply() function that you've already created. You're going to have to be resourceful to figure out how to
+ do this. However, you may continue to use the + operator for string concatenation.
 
 This function should be dynamic, accepting an array of any length.
 
-Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
+Test this function by hand in the console to get it working, and when you think it is finished, 
+uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
@@ -154,6 +163,6 @@ function multiplyAnyArray(dynamicArray) {
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+//testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
